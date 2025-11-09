@@ -10,8 +10,8 @@ import { SunIcon, MoonIcon } from './components/icons';
 
 const App: React.FC = () => {
   return (
-    <div className="bg-gray-200 min-h-screen flex items-center justify-center p-4 font-sans">
-      <div className="relative w-full max-w-sm h-[844px] bg-slate-50 rounded-[40px] shadow-2xl overflow-hidden border-8 border-black">
+    <div className="bg-slate-50 min-h-screen font-sans md:bg-gray-200 md:flex md:items-center md:justify-center md:p-4">
+      <div className="relative w-full h-screen bg-slate-50 overflow-hidden md:max-w-sm md:h-[844px] md:rounded-[40px] md:shadow-2xl md:border-8 md:border-black">
         <div className="w-full h-full overflow-y-auto">
           <Header />
           <main className="p-4 space-y-5 pb-24">
@@ -39,8 +39,8 @@ const App: React.FC = () => {
           </main>
           <BottomNav />
         </div>
-        {/* Notch and Dynamic Island */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-7 bg-black rounded-b-xl"></div>
+        {/* Notch and Dynamic Island - Hidden on mobile */}
+        <div className="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 w-40 h-7 bg-black rounded-b-xl"></div>
       </div>
     </div>
   );
